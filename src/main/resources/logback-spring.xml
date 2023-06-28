@@ -28,4 +28,10 @@
             <appender-ref ref="FILEINFO"/>
         </root>
     </springProfile>
+
+
+    <!--打印sql日志-->
+    <logger name="com.gnss.web" level="DEBUG"></logger>
+
+
 </configuration>

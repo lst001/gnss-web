@@ -1,6 +1,7 @@
 package com.gnss.web.consumer;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONObject;
 import com.gnss.core.constants.AlarmTypeEnum;
 import com.gnss.core.constants.TerminalStatusEnum;
 import com.gnss.core.proto.LocationProto;
@@ -111,6 +112,7 @@ public class TerminalStatusReceiver {
      */
     private void handleLocation(TerminalStatusProto terminalStatusProto) {
         LocationProto location = terminalStatusProto.getLocation();
+        System.out.println(JSONObject.toJSONString(location));
         //防止判断状态位时空指针
         if (location.getStatusBits() == null) {
             location.setStatusBits(Collections.emptyList());

@@ -26,13 +26,7 @@ import java.time.LocalDateTime;
  * @date 2019/10/14
  */
 @Entity
-@Table(name = "sys_terminal", indexes = {
-        @Index(name = "terminal_idx_terminal_num", columnList = "terminalNum"),
-        @Index(name = "terminal_idx_phone_num", columnList = "phoneNum"),
-        @Index(name = "terminal_idx_vehicle_num", columnList = "vehicleNum"),
-        @Index(name = "terminal_idx_created_date", columnList = "createdDate"),
-        @Index(name = "terminal_idx_last_modified_date", columnList = "lastModifiedDate"),
-})
+@Table(name = "sys_terminal")
 @EntityListeners(AuditingEntityListener.class)
 @Data
 public class Terminal {
